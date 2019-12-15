@@ -2,7 +2,7 @@ local combine = {}
 
 local function icombn(tbl,i,n,t,l)
    t = t or {}
-   l = l or table.getn(tbl)
+   l = l or #tbl
    if n == 1 then
       local j = i
       return function()
@@ -32,7 +32,7 @@ local function icombn_many(n,params,t)
    t = t or {}
    if n < 1 then return nil end
    local o = params[n]
-   local l = table.getn(o)
+   local l = #o
    if n == 1 then
       local i = 1
       return function()
@@ -88,7 +88,7 @@ function ipermute(n)
 end
 
 function combine.combn(tbl,n)
-   if n <= 0 or n > table.getn(tbl) then
+   if n <= 0 or n > #tbl then
       error("Need 0 < n <= tbl length.")
    end
    return icombn(tbl,1,n,nil,nil)
@@ -96,13 +96,13 @@ end
 
 function combine.combn_many(...)
    local params = {...}
-   local l = table.getn(params)
+   local l = #params
    if l == 0 then error("Need at least one array.") end
    return icombn_many(l,params,nil)
 end
 
 function combine.powerset(tbl)
-   local l,i = table.getn(tbl),1
+   local l,i = #tbl,1
    local n,v = combn_no(l,i), icombn(tbl,1,i)
    return function()
       n = n-1
