@@ -1,15 +1,15 @@
 package = "luacombine"
-version = "scm-0"
+version = "scm-1"
 
 source = {
-  url = "git://github.com/emiruz/luacombine.git",
+  url = "git://github.com/ham/luacombine.git",
 }
 
 description = {
   summary = "Pure, performant combination and permutation library for Lua and LuaJIT.",
-  homepage = "https://github.com/emiruz/luacombine",
+  homepage = "https://github.com/ham/luacombine",
   license = "MIT/X11",
-  maintainer = "emir@usgroupltd.uk",
+  maintainer = "hello@khayyam.me",
   detailed = "Pure, performant combination and permutation library for Lua and LuaJIT."
 }
 
