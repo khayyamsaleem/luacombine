@@ -24,7 +24,7 @@ local function icombn(tbl,i,n,t,l)
       end
       if x == nil then return nil end
       t[n] = tbl[j]
-      return table.unpack(t)
+      return t
    end
 end
 
@@ -55,7 +55,7 @@ local function icombn_many(n,params,t)
       end
       if x == nil then return nil end
       t[n] = o[i]
-      return table.unpack(t)
+      return t
    end
 end
 
@@ -125,7 +125,7 @@ function combine.permute(tbl)
       local x = v()
       if x == nil then return nil end
       for i=1,#x do t[i] = tbl[x[i]] end
-      return table.unpack(t)
+      return t
    end
 end
 

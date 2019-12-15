@@ -1,5 +1,5 @@
 package = "luacombine"
-version = "scm-5"
+version = "scm-6"
 
 source = {
   url = "git://github.com/khayyamsaleem/luacombine.git",
