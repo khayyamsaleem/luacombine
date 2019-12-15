@@ -117,7 +117,7 @@ function combine.powerset(tbl)
 end
 
 function combine.permute(tbl)
-   local l = table.getn(tbl)
+   local l = #tbl
    if l == 0 then return tbl end
    local v = ipermute(l)
    local t = {}
